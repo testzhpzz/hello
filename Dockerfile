@@ -1,3 +1,6 @@
 #使用的基础镜像
-FROM tomcat:jdk8-openjdk
-COPY ./target/*.war /usr/local/tomcat/webapps
+FROM java:8
+COPY *.jar /app.jar
+CMD ["--server.port=8080"]
+EXPOSE 8080
+ENTRYPOINT ["java","-jar","/app.jar"]
