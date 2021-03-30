@@ -10,8 +10,9 @@ pipeline {
         }
         stage('PushImage') {
             steps {
-                sh 'sudo docker tag hello:v1.0 47.115.1.158/harbor/hello:v1.0'
-                sh 'sudo docker push 47.115.1.158/harbor/hello:v1.0'
+//                一定要加端口号
+                sh 'sudo docker tag hello:v1.0 47.115.1.158:80/harbor/hello:v1.0'
+                sh 'sudo docker push 47.115.1.158:80/harbor/hello:v1.0'
             }
         }
     }
