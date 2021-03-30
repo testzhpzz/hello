@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Build1') {
+        stage('Build') {
             steps {
                 sh 'mvn clean install -DskipTests'
                 sh 'sudo docker build -t hello:v1.0 .'
