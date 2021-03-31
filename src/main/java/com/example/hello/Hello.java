@@ -1,6 +1,8 @@
 package com.example.hello;
 
 
+import org.springframework.scheduling.annotation.Async;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class Hello {
     @GetMapping
     public String helloWorld(){
-        return "hizz";
+        System.out.println("执行");
+        return "hizzz";
     }
 }
