@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class Hello {
     @GetMapping
     public String helloWorld(){
-        System.out.println("执行");
         return "hizzz";
     }
 }
