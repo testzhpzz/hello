@@ -18,8 +18,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'ssh root@8.135.143.103'
-                sh 'pwd'
+                sh 'sudo sh /opt/Deploy.sh'
             }
         }
     }
