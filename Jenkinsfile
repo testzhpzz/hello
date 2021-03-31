@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'ssh -tt root@8.135.143.103'
+                sh 'ssh root@8.135.143.103'
                 sh 'docker pull 47.115.1.158:80/harbor/hello:latest'
                 sh 'docker run 47.115.1.158:80/harbor/hello:latest'
                 sh 'docker rmi 47.115.1.158:80/harbor/hello:latest'
