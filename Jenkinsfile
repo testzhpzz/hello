@@ -17,7 +17,9 @@ pipeline {
                 //将镜像推送到harbor私有库
                 sh 'sudo docker push 47.115.1.158:80/harbor/hello:latest'
                 //删除本地的容器镜像
-                sh 'sudo docker rmi -f `docker images -q`'
+                sh '''sudo docker rmi hello:latest
+                      sudo docker 47.115.1.158:80/harbor/hello:latest
+                   '''
             }
         }
         stage('Deploy') {
