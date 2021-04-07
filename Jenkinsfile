@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'sudo sh /opt/Deploy.sh'
+                sh 'sudo sh /opt/Start.sh'
             }
         }
     }
