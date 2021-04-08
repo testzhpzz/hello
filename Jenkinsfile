@@ -16,7 +16,7 @@ pipeline {
                 sh 'sudo docker tag hello:latest 47.115.1.158:80/harbor/hello:latest'
                 //将镜像推送到harbor私有库
                 sh 'sudo docker push 47.115.1.158:80/harbor/hello:latest'
-                //删除本地的容器镜像
+                // 删除本地的容器镜像
                 sh '''sudo docker rmi hello:latest
                       sudo docker rmi 47.115.1.158:80/harbor/hello:latest
                    '''
